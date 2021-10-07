@@ -1,0 +1,23 @@
+{
+  "name": "basick6",
+  "version": "1.0.0",
+  "description": "Load and Performance Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azfarhussain-10p/basick6.git"
+  },
+  "author": "Azfar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azfarhussain-10p/basick6/issues"
+  },
+  "homepage": "https://github.com/azfarhussain-10p/basick6#readme",
+  "dependencies": {
+    "papaparse": "^5.3.1",
+    "prettier": "^2.4.1"
+  }
+}

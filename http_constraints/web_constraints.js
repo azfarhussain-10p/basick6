@@ -1,0 +1,22 @@
+//Header Body
+export const xapikey = 'Wux86Ixfqy1Bmxb2Wd8CA6pd9VAC69Ax2TvCgMG8'
+export const origin = 'https://apply21.uat.commonapp.net'
+export const host = 'api21.uat.commonapp.net'
+export const constentType = 'application/json'
+
+//End Points
+//Get Auth To Create App Account
+export const commonAppURL = 'https://api21.uat.commonapp.net/auth/token'
+//Create an Applicant Account
+export const navianceURL =
+	'https://commonapp-int.qa.edocs-int.naviance.com/applicant'
+
+export const api21URL = 'https://api21.uat.commonapp.net/applicant'
+
+//For Create Applicant
+export const apiPartner = 'apipartner21.uat.commonapp.net/applicant'
+
+//auth Token for Create Applicant
+
+export const applicantToken =
+	'eyJraWQiOiJZRnpYQmJ0OXpmekQ2Y3NYUVBNdWsyc2lXQ2d1clBKd241Wk5XUVJYeDk4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI5YWVhZDA3NS0wNTk1LTQ0ZGQtYTVhZC1jYTM2ZGQ1MGI2YTciLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9FVHJsSUhKdDIiLCJjb2duaXRvOnVzZXJuYW1lIjoiMjEtTkFWSUFOQ0UtQzU2MTBBQUItOUI4NS00NTY1LThDRUQtQ0IyMjQxMDAzNjg3IiwiYXVkIjoiMzRtNnRxaG4wbXFqdHNuODRxbGhnYjg2bTEiLCJldmVudF9pZCI6IjY1NTM5ODNjLTlhMTUtNDZmZS1iYzczLTlmMzBjNzhmNjE5NSIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOlBBUlRORVJJRCI6IjI1IiwiYXV0aF90aW1lIjoxNjIwMjE3NjcwLCJjdXN0b206UEFSVE5FUlJPTEUiOiJERUZBVUxUIiwibmFtZSI6Ik5BVklBTkNFIiwiZXhwIjoxNjIwMjIxMjcwLCJpYXQiOjE2MjAyMTc2NzAsImVtYWlsIjoicGFydG5lckBjb21tb25hcHAub3JnIn0.nvjf8JbNbIxt2zUM2P_cmOn8zKhpEfqPF5FQvSsnWvQU8ykBcFGz3smO9Wf4Q9TTjesabTK1roK00BAA4PMtwCK1iupmBUqKWJEe6MPXifBqfn4BYMMaMtLohjBro4jmiUgdSOX15DNQelHmoAt2_Bak2mwkLzg7LN-DtPNlTs29NdyBSzsng9OEy48VgW1vVPMg-3CDAkMpDm2icI_3PjgI-ehUzX60xdgN_EGUg_tE1LxpD5Z6caxTvglXhu1YzHlo08Jq3wx7yX3uZwQO_PKPxI9mExMM_fme3GeORpAF5h3BdLVWFmla29bDc_F7CPqwRVRfdEF4xUgfxi2nqQ'
