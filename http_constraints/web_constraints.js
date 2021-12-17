@@ -1,22 +1,234 @@
-//Header Body
-export const xapikey = 'Wux86Ixfqy1Bmxb2Wd8CA6pd9VAC69Ax2TvCgMG8'
-export const origin = 'https://apply21.uat.commonapp.net'
-export const host = 'api21.uat.commonapp.net'
-export const constentType = 'application/json'
-
-//End Points
-//Get Auth To Create App Account
-export const commonAppURL = 'https://api21.uat.commonapp.net/auth/token'
-//Create an Applicant Account
-export const navianceURL =
-	'https://commonapp-int.qa.edocs-int.naviance.com/applicant'
-
-export const api21URL = 'https://api21.uat.commonapp.net/applicant'
-
-//For Create Applicant
-export const apiPartner = 'apipartner21.uat.commonapp.net/applicant'
+export const hosApiBaseURL = 'https://staging.goqube.io/'
 
 //auth Token for Create Applicant
+export const applicantToken = 'Token 07bfbe9ad395b7026241f87086a993118399844c'
 
-export const applicantToken =
-	'eyJraWQiOiJZRnpYQmJ0OXpmekQ2Y3NYUVBNdWsyc2lXQ2d1clBKd241Wk5XUVJYeDk4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI5YWVhZDA3NS0wNTk1LTQ0ZGQtYTVhZC1jYTM2ZGQ1MGI2YTciLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9FVHJsSUhKdDIiLCJjb2duaXRvOnVzZXJuYW1lIjoiMjEtTkFWSUFOQ0UtQzU2MTBBQUItOUI4NS00NTY1LThDRUQtQ0IyMjQxMDAzNjg3IiwiYXVkIjoiMzRtNnRxaG4wbXFqdHNuODRxbGhnYjg2bTEiLCJldmVudF9pZCI6IjY1NTM5ODNjLTlhMTUtNDZmZS1iYzczLTlmMzBjNzhmNjE5NSIsInRva2VuX3VzZSI6ImlkIiwiY3VzdG9tOlBBUlRORVJJRCI6IjI1IiwiYXV0aF90aW1lIjoxNjIwMjE3NjcwLCJjdXN0b206UEFSVE5FUlJPTEUiOiJERUZBVUxUIiwibmFtZSI6Ik5BVklBTkNFIiwiZXhwIjoxNjIwMjIxMjcwLCJpYXQiOjE2MjAyMTc2NzAsImVtYWlsIjoicGFydG5lckBjb21tb25hcHAub3JnIn0.nvjf8JbNbIxt2zUM2P_cmOn8zKhpEfqPF5FQvSsnWvQU8ykBcFGz3smO9Wf4Q9TTjesabTK1roK00BAA4PMtwCK1iupmBUqKWJEe6MPXifBqfn4BYMMaMtLohjBro4jmiUgdSOX15DNQelHmoAt2_Bak2mwkLzg7LN-DtPNlTs29NdyBSzsng9OEy48VgW1vVPMg-3CDAkMpDm2icI_3PjgI-ehUzX60xdgN_EGUg_tE1LxpD5Z6caxTvglXhu1YzHlo08Jq3wx7yX3uZwQO_PKPxI9mExMM_fme3GeORpAF5h3BdLVWFmla29bDc_F7CPqwRVRfdEF4xUgfxi2nqQ'
+export const allApis = [{
+    "RequestURL":"https://staging.goqube.io/api/accounts/3347557908480428292/cards/",
+    "RequestBody": [
+        {
+          "id": "string",
+          "card_number": "string",
+          "is_active": true,
+          "is_frozen": true,
+          "status": "active",
+          "deactivated_date": "string",
+          "card_holder_name": "string",
+          "last_four_digits": "string"
+        }
+      ],
+      "RequestHeaders":{
+        "headers":{
+          "Authorization":"String"
+        }
+      },
+      "RequestType": "GET"
+
+},
+{
+  "RequestURL":"https://staging.goqube.io/api/users/accept-terms-and-conditions/",
+  "RequestBody": {
+    "terms_and_conditions_accepted": true,
+    "privacy_policy_accepted": true
+  },
+    "RequestHeaders":{
+      "headers":{
+        "Authorization":"String"
+      }
+    },
+    "RequestType": "POST"
+
+},
+{
+  "RequestURL":"https://staging.goqube.io/api/users/authenticate-with-verification-code/",
+  "RequestBody": {
+    "phone_number": "string",
+    "passcode": "string",
+    "verification_code": "string",
+    "device": {
+      "os": "ios",
+      "os_version": "string",
+      "device_manufacturer": "string",
+      "device_model": "string",
+      "device_unique_id": "string",
+      "app_name": "string",
+      "app_version": "string"
+    }
+  },
+    "RequestHeaders":{
+      "headers":{
+        "Authorization":"String"
+      }
+    },
+    "RequestType": "POST"
+},
+{
+  "RequestURL":"https://staging.goqube.io/api/users/change-passcode/",
+  "RequestBody": {
+    "old_passcode": "string",
+    "new_passcode": "string"
+  },
+    "RequestHeaders":{
+      "headers":{
+        "Authorization":"String"
+      }
+    },
+    "RequestType": "POST"
+},
+{
+  "RequestURL":"https://staging.goqube.io/api/users/emails/Vanessa_Wade@encom.org/",
+  "RequestBody": {
+    "old_passcode": "string",
+    "new_passcode": "string"
+  },
+    "RequestHeaders":{
+      "headers":{
+        "Authorization":"String"
+      }
+    },
+    "RequestType": "GET"
+},
+{
+  "RequestURL":"https://staging.goqube.io/api/users/forgot-password/",
+  "RequestBody": {
+    "email": "Vanessa_Wade@encom.org"
+  },
+    "RequestHeaders":{
+      "headers":{
+        "Authorization":"String"
+      }
+    },
+    "RequestType": "POST"
+},
+{
+  "RequestURL":"https://staging.goqube.io/api/users/forgot-password/change/",
+  "RequestBody": {
+    "forgot_password_key": "string",
+    "new_password": "string"
+  },
+    "RequestHeaders":{
+      "headers":{
+        "Authorization":"String"
+      }
+    },
+    "RequestType": "POST"
+},
+{
+  "RequestURL":"https://staging.goqube.io/api/users/me/",
+  "RequestBody": {
+  },
+    "RequestHeaders":{
+      "headers":{
+        "Authorization":"String"
+      }
+    },
+    "RequestType": "GET"
+},
+{
+  "RequestURL":"https://staging.goqube.io/api/users/me/",
+  "RequestBody": {
+    "avatar": "http://example.com",
+    "email": "anessa_Wade@encom.org",
+    "phone_number": "string",
+    "phone_number_token": "string",
+    "are_push_notifications_allowed": true
+  },
+    "RequestHeaders":{
+      "headers":{
+        "Authorization":"String"
+      }
+    },
+    "RequestType": "GET"
+}]
+
+export const onBoardingAPIs = [{
+  Name:"onboarding_first_name_last_name_email_create",
+  RequestURL:"https://staging.goqube.io/api/onboarding/first-name-last-name-email/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+},
+{
+  Name:"onboarding_phone_numbers_create",
+  RequestURL:"https://staging.goqube.io/api/onboarding/phone-numbers/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+},
+{
+  Name:"onboarding_phone_numbers_verify_create",
+  RequestURL:"hhttps://staging.goqube.io/api/onboarding/phone-numbers/verify/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+},
+{
+  Name:"onboarding_plan_create",
+  RequestURL:"https://staging.goqube.io/api/onboarding/plan/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+},
+{
+  Name:"onboarding_passcode_create",
+  RequestURL:"https://staging.goqube.io/api/onboarding/passcode/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+},
+{
+  Name:"onboarding_debit_card_selection_create",
+  RequestURL:"https://staging.goqube.io/api/onboarding/debit-card-selection/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+},
+{
+  Name:"onboarding_mailing_address_create",
+  RequestURL:"https://staging.goqube.io/api/onboarding/mailing-address/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+},
+{
+  Name:"onboarding_birth_date_ssn_create",
+  RequestURL:"https://staging.goqube.io/api/onboarding/birth-date-ssn/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+},
+{
+  Name:"onboarding_summary_create",
+  RequestURL:"https://staging.goqube.io/api/onboarding/summary/",
+  RequestBody: {},
+    RequestHeaders:{
+      headers:{
+      }
+    },
+    RequestType: "POST"
+}
+]
