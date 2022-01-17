@@ -1,11 +1,38 @@
-// export const hosApiBaseURL = 'https://staging.goqube.io/api/'
-export const hosApiBaseURL = 'http://localhost:8000/api/'
+export const hosApiBaseURL = 'https://staging.goqube.io/api/'
+// export const hosApiBaseURL = 'http://localhost:8000/api/'
+
+
+export const onboardingScenariosRatio = 0.006
+export const totalNumberofUsers = 150
+export const totalLengthofTest = 60*24
+
 
 //auth Token for Create Applicant
 export const applicantToken = 'Token 07bfbe9ad395b7026241f87086a993118399844c'
 
-export const allApis = [
+export const UsersApis = [
+  {
+    Name:"onboarding_phone_numbers_create",
+    RequestURL:`${hosApiBaseURL}onboarding/phone-numbers/`,
+    RequestBody: {},
+      RequestHeaders:{
+        headers:{
+        }
+      },
+      RequestType: "POST"
+  },
+  {
+    Name: "web_users_login_create",
+    RequestURL:`${hosApiBaseURL}web/users/login/`,
+    RequestBody: {},
+      RequestHeaders:{
+        headers:{
+        }
+      },
+      RequestType: "POST"
+  },
 {
+  "Name": "accept-terms-and-conditions",
   "RequestURL":`${hosApiBaseURL}users/accept-terms-and-conditions/`,
   "RequestBody": {
     "terms_and_conditions_accepted": true,
@@ -20,19 +47,20 @@ export const allApis = [
 
 },
 {
+  "Name":"authenticate-with-verification-code",
   "RequestURL":`${hosApiBaseURL}users/authenticate-with-verification-code/`,
   "RequestBody": {
-    "phone_number": "string",
-    "passcode": "string",
-    "verification_code": "string",
+    "phone_number": "+18007777776",
+    "passcode": "123456",
+    "verification_code": "00000",
     "device": {
       "os": "ios",
-      "os_version": "string",
-      "device_manufacturer": "string",
-      "device_model": "string",
+      "os_version": "1",
+      "device_manufacturer": "apple",
+      "device_model": "1",
       "device_unique_id": "string",
-      "app_name": "string",
-      "app_version": "string"
+      "app_name": "QubeMoney",
+      "app_version": "1.0.0"
     }
   },
     "RequestHeaders":{
@@ -43,10 +71,11 @@ export const allApis = [
     "RequestType": "POST"
 },
 {
+  "Name": "change-passcode",
   "RequestURL":`${hosApiBaseURL}users/change-passcode/`,
   "RequestBody": {
-    "old_passcode": "string",
-    "new_passcode": "string"
+    "old_passcode": "123456",
+    "new_passcode": "123456"
   },
     "RequestHeaders":{
       "headers":{
@@ -56,11 +85,9 @@ export const allApis = [
     "RequestType": "POST"
 },
 {
-  "RequestURL":`${hosApiBaseURL}users/emails/Vanessa_Wade@encom.org/`,
-  "RequestBody": {
-    "old_passcode": "string",
-    "new_passcode": "string"
-  },
+  "Name": "users-emails",
+  "RequestURL":`${hosApiBaseURL}users/emails/jmkroff@gmail.com/`,
+  "RequestBody": {},
     "RequestHeaders":{
       "headers":{
         "Authorization":"String"
@@ -69,9 +96,10 @@ export const allApis = [
     "RequestType": "GET"
 },
 {
+  "Name":"forgot-password",
   "RequestURL":`${hosApiBaseURL}users/forgot-password/`,
   "RequestBody": {
-    "email": "Vanessa_Wade@encom.org"
+    "email": "user10_23@gmail.com"
   },
     "RequestHeaders":{
       "headers":{
@@ -81,6 +109,7 @@ export const allApis = [
     "RequestType": "POST"
 },
 {
+  "Name": "forgot-password-change",
   "RequestURL":`${hosApiBaseURL}users/forgot-password/change/`,
   "RequestBody": {
     "forgot_password_key": "string",
@@ -94,6 +123,7 @@ export const allApis = [
     "RequestType": "POST"
 },
 {
+  "Name": "users-me-get",
   "RequestURL":`${hosApiBaseURL}users/me/`,
   "RequestBody": {
   },
@@ -105,12 +135,13 @@ export const allApis = [
     "RequestType": "GET"
 },
 {
+  "Name": "users-me-post",
   "RequestURL":`${hosApiBaseURL}users/me/`,
   "RequestBody": {
     "avatar": "http://example.com",
-    "email": "anessa_Wade@encom.org",
+    "email": "user10_23@gmail.com",
     "phone_number": "string",
-    "phone_number_token": "string",
+    "phone_number_token": "",
     "are_push_notifications_allowed": true
   },
     "RequestHeaders":{
@@ -119,7 +150,32 @@ export const allApis = [
       }
     },
     "RequestType": "GET"
-}]
+},
+{
+  "Name": "search-users",
+  "RequestURL": "https://staging.goqube.io/api/users/search/",
+  "RequestBody": {},
+  "RequestHeaders":{
+    "headers":{
+      "Authorization":"String"
+    }
+  },
+  "RequestType": "GET"
+},
+{
+  "Name": "card-activate",
+  "RequestURL": "https://staging.goqube.io/api/accounts/{account_id}/cards/",
+  "RequestBody": {
+    },
+  "RequestHeaders":{
+    "headers":{
+      "Authorization":"String"
+    }
+  },
+  "RequestType": "GET"
+}
+
+]
 
 export const AfterLoginAPIs = [
 {
@@ -479,19 +535,6 @@ export const CreateUserAPIs = [
 {
   Name:"onboarding_summary_create",
   RequestURL:`${hosApiBaseURL}onboarding/summary/`,
-  RequestBody: {},
-    RequestHeaders:{
-      headers:{
-      }
-    },
-    RequestType: "POST"
-}
-]
-
-
-export const usersAPIs = [{
-  Name:"users_accept_terms_and_conditions_create",
-  RequestURL:`${hosApiBaseURL}users/accept-terms-and-conditions/`,
   RequestBody: {},
     RequestHeaders:{
       headers:{

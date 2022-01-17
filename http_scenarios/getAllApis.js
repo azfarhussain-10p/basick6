@@ -1,4 +1,4 @@
-import { allApis,withFlowAPIs,CreateUserAPIs,usersAPIs,AfterLoginAPIs } from "../http_constraints/web_constraints.js"
+import { UsersApis,withFlowAPIs,CreateUserAPIs,usersAPIs,AfterLoginAPIs } from "../http_constraints/web_constraints.js"
 
 export default function getApisMetaData(process) {
 	if(process == "onboarding"){
@@ -97,7 +97,7 @@ export default function getApisMetaData(process) {
 					case "web_users_login_create":
 						var body = {
 							"phone_number": "",
-							"verification_code": "",
+							"verification_code": "00000",
 							"password": "123456",
 							"device": {
 							  "os": "ios",
@@ -257,7 +257,7 @@ export default function getApisMetaData(process) {
 		return AfterLoginAPIs;
 	}
 	else if(process == "all"){
-		for (let index = 0; index < allApis.length; index++) {
+		for (let index = 0; index < UsersApis.length; index++) {
 			const element = array[index];
 			switch (element.Name) {
 				case "onboarding_summary_create":
@@ -274,6 +274,37 @@ export default function getApisMetaData(process) {
 
 		}
 		return allApis
+	}
+	else if(process == "users"){
+		for (let index = 0; index < UsersApis.length; index++) {
+			const element = UsersApis[index];
+			switch (element.Name) {
+				case "web_users_login_create":
+					var body = {
+						"phone_number": "",
+						"verification_code": "00000",
+						"password": "123456",
+						"device": {
+							"os": "ios",
+							"os_version": "14.0.0",
+							"device_manufacturer": "apple",
+							"device_model": "1",
+							"device_unique_id": `121${__VU}${__ITER}`,
+							"app_name": "QubeMoney",
+							"app_version": "1.0.0"
+						}
+						}
+						UsersApis[index].RequestBody = body;
+				break;
+				case "authenticate-with-verification-code":
+					UsersApis[index].RequestBody.device_unique_id = `121${__VU}${__ITER}`;
+					break;
+				default:
+					break;
+			}
+
+		}
+		return UsersApis
 	}
 
 
