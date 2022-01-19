@@ -2,9 +2,9 @@ export const hosApiBaseURL = 'https://staging.goqube.io/api/'
 // export const hosApiBaseURL = 'http://localhost:8000/api/'
 
 
-export const onboardingScenariosRatio = 0.006
-export const totalNumberofUsers = 150
-export const totalLengthofTest = 60*24
+export const noOfRequestOnBoarding = 1472
+export const totalNumberofUsers = 1500
+export const totalLengthofTest = 5//60*60*24
 
 
 //auth Token for Create Applicant

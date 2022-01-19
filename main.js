@@ -1,15 +1,11 @@
-import { applicantToken } from "./http_constraints/web_constraints.js";
-import postCall  from "./http_calls/post_call.js";
-import getAllApis from './http_scenarios/getAllApis.js';
-import { check } from 'k6';
-import getCall  from './http_calls/get_call.js'
-import {} from './http_constraints/web_constraints'
+import { totalNumberofUsers,totalLengthofTest } from './http_constraints/web_constraints.js';
+import runOnBoardingScenario from './http_scenarios/onBoardingScenario.js';
 
 export let options = {
-  vus: 10,
-  duration: '1s',
+  vus: totalNumberofUsers,
+  duration: totalLengthofTest + 's',
 };
 
 export default function () {
-
+  runOnBoardingScenario(options)
 }

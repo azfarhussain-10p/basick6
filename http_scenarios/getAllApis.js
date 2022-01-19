@@ -305,15 +305,6 @@ export default function getApisMetaData(process) {
 
 		}
 		return UsersApis
-	}
-
-
-
-
-						
-
-
-
-						
+	}					
 }
 
